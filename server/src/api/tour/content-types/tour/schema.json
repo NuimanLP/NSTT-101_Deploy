@@ -1,0 +1,88 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tours",
+  "info": {
+    "singularName": "tour",
+    "pluralName": "tours",
+    "displayName": "Tour",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "EventName": {
+      "type": "string",
+      "default": "ไม่มี"
+    },
+    "EventDescription": {
+      "type": "text"
+    },
+    "TourDateInit": {
+      "type": "date"
+    },
+    "Price": {
+      "type": "decimal"
+    },
+    "AvailableSeat": {
+      "type": "integer"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Category": {
+      "type": "string"
+    },
+    "Plans": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::plan.plan",
+      "mappedBy": "Tour"
+    },
+    "TourDateFinish": {
+      "type": "date"
+    },
+    "Star": {
+      "type": "integer"
+    },
+    "MealAmount": {
+      "type": "integer"
+    },
+    "TimeCount": {
+      "type": "string"
+    },
+    "CurrentSeat": {
+      "type": "integer"
+    },
+    "TourAmount": {
+      "type": "integer"
+    },
+    "Booking": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking.booking",
+      "mappedBy": "Tour_Table"
+    },
+    "ShoppingCount": {
+      "type": "integer"
+    },
+    "EventCount": {
+      "type": "integer"
+    },
+    "Vehicle": {
+      "type": "string"
+    },
+    "Free": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "highlights",
+  "info": {
+    "singularName": "highlight",
+    "pluralName": "highlights",
+    "displayName": "Highlight",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Plans": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::plan.plan",
+      "mappedBy": "Highlights"
+    },
+    "Count": {
+      "type": "boolean"
+    }
+  }
+}
